@@ -35,8 +35,9 @@ document.getElementById("startTimer").onclick=function(){
    if(timeID==null){
  timeID=setInterval(timeincrem,1000)}}
 document.getElementById('stopTimer').onclick=function(){clearInterval(timeID)
-timeID=undefined}
+timeID=null}
 document.getElementById('resetTimer').onclick=function(){displaytime=0;document.getElementById("showtime").innerHTML=displaytime;clearInterval(timeID);
-timeID=undefined}
+timeID=null}
 
 </script>
+
