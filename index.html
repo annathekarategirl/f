@@ -1,0 +1,40 @@
+<input type="button" id="startTimer" value="Start Timer"><br>
+
+<input type="button" id="stopTimer" value="Stop Timer"><br> 
+
+<input type="button" id="resetTimer" value="Reset Timer"><br> 
+<p id="showtime">0</p>
+<script>
+/*let timeID;
+lbPlay.onclick = function(){
+   if (timeID){
+      //stop slideshow
+      window.clearInterval(timeID);
+      timeID=undefined;
+
+   }else {
+      //start slideshow
+      showNext();
+      timeID=window.setInterval(showNext,1500);
+   }
+}
+Used the above code as a reference
+*/
+//for loop with p tag of 00:00 and set interval every 1 second replace inner html with next one like 00:01
+//https://www.w3schools.com/jsref/met_win_setinterval.asp used this for setInterval
+var timeID
+displaytime=0
+function timeincrem(){
+   displaytime++
+   document.getElementById("showtime").innerHTML=displaytime
+   
+
+}
+
+document.getElementById("startTimer").onclick=function(){
+ timeID=setInterval(timeincrem,1000)}
+document.getElementById('stopTimer').onclick=function(){clearInterval(timeID)
+timeID=undefined}
+document.getElementById('resetTimer').onclick=function(){displaytime=0;document.getElementById("showtime").innerHTML=displaytime;clearInterval(timeID);
+timeID=undefined}
+</script>
